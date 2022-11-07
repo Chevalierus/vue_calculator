@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="block">
+            <input @keyup.enter="calc()" class="block_input" type="text" v-model="result" placeholder="0">
+            <button @click="input(number)" class="block_btn" v-for="number in numbers">{{number}}</button>
+            <button @click="input(operator)" class="block_btn block-op" v-for="operator in operators">{{operator}}</button>
+            <button @click="reset()" class="block_btn block-op">C</button>
+            <button @click="calc()" class="block_btn block-op">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
